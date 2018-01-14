@@ -4,7 +4,7 @@ def abap_unit_coverage(HOST,CREDENTIAL,PACKAGE,COVERAGE) {
 	withCredentials([usernamePassword(credentialsId: CREDENTIAL, usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
 		stage('ABAP Unit and Code Coverage') {
 			dir('sap-pipeline') {
-				bat "C:\Users\NB002\AppData\Roaming\npm\newman run abap_unit_coverage.postman_collection.json --insecure --bail " +
+				bat "C:/Users/NB002/AppData/Roaming/npm/newman run abap_unit_coverage.postman_collection.json --insecure --bail " +
 				"--environment NPL.postman_environment.json " +
 				"--timeout-request 120000 " +
 				"--global-var host=$HOST " +
@@ -23,7 +23,7 @@ def abap_sci(HOST,CREDENTIAL,PACKAGE) {
 	withCredentials([usernamePassword(credentialsId: CREDENTIAL, usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {	
 		stage('ABAP Code Inspector') {
 			dir('sap-pipeline') {
-					bat "C:\Users\NB002\AppData\Roaming\npm\newman run abap_sci.postman_collection.json --insecure --bail " +
+					bat "C:/Users/NB002/AppData/Roaming/npm/newman run abap_sci.postman_collection.json --insecure --bail " +
 					"--environment NPL.postman_environment.json " +
 					"--timeout-request 120000 " +
 					"--global-var host=$HOST " +
@@ -42,7 +42,7 @@ def sap_api_test(HOST,CREDENTIAL) {
 		stage('SAP API Tests') {
 			dir('sap-pipeline') {
 				try {
-					bat "C:\Users\NB002\AppData\Roaming\npm\newman run SimpleRESTTest.postman_collection.json --insecure --bail " + 
+					bat "C:/Users/NB002/AppData/Roaming/npm/newman run SimpleRESTTest.postman_collection.json --insecure --bail " + 
 					"--environment NPL.postman_environment.json " + 
 					"--reporters junit " +
 					"--timeout-request 10000 " +
