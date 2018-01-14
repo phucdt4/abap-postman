@@ -70,7 +70,7 @@
 					"query": [
 						{
 							"key": "sap-client",
-							"value": "{{client}}",
+							"value": "800",
 							"equals": true
 						},
 						{
@@ -206,7 +206,7 @@
 					"query": [
 						{
 							"key": "sap-client",
-							"value": "{{client}}",
+							"value": "800",
 							"equals": true
 						},
 						{
@@ -356,7 +356,7 @@
 					"query": [
 						{
 							"key": "sap-client",
-							"value": "{{client}}",
+							"value": "800",
 							"equals": true
 						},
 						{
