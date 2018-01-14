@@ -11,7 +11,9 @@ def abap_unit_coverage(HOST,CREDENTIAL,PACKAGE,COVERAGE) {
 				"--global-var username=$USERNAME " +
 				"--global-var password=$PASSWORD " +
 				"--global-var package=$PACKAGE " +
-				"--global-var coverage_min=$COVERAGE "
+				"--global-var coverage_min=$COVERAGE " +
+				"--global-var client=800 "
+				
 			}
 		}
 	}
@@ -29,7 +31,8 @@ def abap_sci(HOST,CREDENTIAL,PACKAGE) {
 					"--global-var host=$HOST " +
 					"--global-var username=$USERNAME " +
 					"--global-var password=$PASSWORD " +
-					"--global-var package=$PACKAGE " 
+					"--global-var package=$PACKAGE "  +
+					"--global-var client=800 "
 			}
 		}
 	}
@@ -48,7 +51,8 @@ def sap_api_test(HOST,CREDENTIAL) {
 					"--timeout-request 10000 " +
 					"--global-var host=$HOST " +
 					"--global-var username=$USERNAME " + 
-					"--global-var password=$PASSWORD "
+					"--global-var password=$PASSWORD " +
+					"--global-var client=800 "
 				} catch(e) {
 					skip_pipeline = true
 					currentBuild.result = 'FAILURE'
